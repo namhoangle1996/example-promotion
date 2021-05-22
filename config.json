@@ -1,0 +1,10 @@
+{
+  "env": "production",
+  "max_pool_size": 1000,
+  "mongo_uri": "mongodb://root:Vietnam2020@1.55.214.191:20003/",
+  "services": {
+    "service_core": "go.micro.srv.core",
+    "service_user": "go.micro.srv.user",
+    "service_promotion": "go.micro.srv.promotion"
+  }
+}

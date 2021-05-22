@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-promotion
+  namespace: wallet
+spec:
+  selector:
+    matchLabels:
+      service: service-promotion
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        service: service-promotion
+    spec:
+      containers:
+        - args:
+            - ./engine
+            - --client_retries=0
+            - --registry=etcd
+            - --registry_address=ectd-service.etcd:2379
+          image: gcr.io/strong-minutia-269302/service-promotion
+          name: service-promotion
+          resources: {}
+          workingDir: /app
+      restartPolicy: Always

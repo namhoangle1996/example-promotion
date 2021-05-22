@@ -1,0 +1,13 @@
+{
+    "env": "test",
+    "max_pool_size": 1000,
+    "mongo_uri": "mongodb://root:root@localhost:27017/",
+    "redis_uri": "localhost:6379",
+    "admin_phone": "0942950392",
+    "queue_uri": "amqp://admin:admin@1.55.214.191:5672/",
+    "services": {
+        "service_core": "go.micro.srv.core",
+        "service_user": "go.micro.srv.user",
+        "service_promotion": "go.micro.srv.promotion"
+    }
+}
